@@ -1,0 +1,159 @@
+/* ===== BODY (BACKGROUND) ===== */
+body {
+  font-family: "Poppins", sans-serif;
+  text-align: center;
+  background: linear-gradient(135deg, #0f2027, #2c5364, #4facfe);
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  color: white;
+}
+
+/* ===== MAIN CONTAINER ===== */
+.container {
+  background: rgba(255, 255, 255, 0.1);
+  padding: 40px;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(15px);
+  transition: 0.3s;
+  width: 350px;
+}
+
+.container:hover {
+  transform: translateY(-5px);
+}
+
+/* ===== HEADING ===== */
+h1 {
+  font-size: 28px;
+  margin-bottom: 20px;
+  color: #ffffff;
+}
+
+/* ===== BUTTON GROUP (HOME PAGE) ===== */
+.button-group {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+/* ===== BUTTON STYLE ===== */
+.btn {
+  padding: 12px 25px;
+  font-size: 18px;
+  color: white;
+  background: linear-gradient(135deg, #00c6ff, #0072ff);
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  text-decoration: none;
+  display: inline-block;
+  transition: 0.3s;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+}
+
+.btn:hover {
+  transform: scale(1.05);
+  background: linear-gradient(135deg, #0072ff, #00c6ff);
+}
+
+
+
+/* ===== TIMER ===== */
+.timer {
+  font-size: 50px;
+  font-weight: bold;
+  color: #00e5ff;
+  margin: 20px 0;
+  padding: 15px;
+  border-radius: 10px;
+  background: rgba(0, 0, 0, 0.2);
+}
+
+/* ===== TIMER BUTTONS ===== */
+.buttons button {
+  padding: 12px 20px;
+  font-size: 16px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  margin: 5px;
+  transition: 0.3s;
+}
+
+/* START BUTTON */
+#start {
+  background-color: #00c853;
+  color: white;
+}
+
+/* PAUSE BUTTON */
+#pause {
+  background-color: #ffd600;
+  color: black;
+}
+
+/* RESET BUTTON */
+#reset {
+  background-color: #ff1744;
+  color: white;
+}
+
+/* BUTTON HOVER */
+.buttons button:hover {
+  transform: scale(1.1);
+}
+
+
+
+@keyframes bounce {
+  0% { transform: translateY(0); }
+  100% { transform: translateY(-10px); }
+}
+
+/* ===== EMAIL SECTION ===== */
+.email-section {
+  margin-top: 20px;
+  padding: 20px;
+  background: rgba(255,255,255,0.1);
+  border-radius: 15px;
+  backdrop-filter: blur(10px);
+}
+
+.email-section h2 {
+  color: #ffffff;
+  margin-bottom: 10px;
+}
+
+.email-section p {
+  color: #ddd;
+  font-size: 14px;
+}
+
+/* INPUT BOX */
+.email-form input[type="email"] {
+  padding: 12px;
+  width: 80%;
+  border: none;
+  border-radius: 8px;
+  outline: none;
+  margin-bottom: 10px;
+}
+
+/* SUBMIT BUTTON */
+.email-form button {
+  padding: 12px 20px;
+  background: linear-gradient(135deg, #00c6ff, #0072ff);
+  border: none;
+  border-radius: 8px;
+  color: white;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.email-form button:hover {
+  transform: scale(1.05);
+}

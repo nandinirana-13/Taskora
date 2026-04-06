@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Taskora | Mission Planner</title>
+
+    <!-- Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+
+    <!-- USE SAME CSS FOR CONSISTENCY -->
+    <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+
+    <div class="container">
+
+        <!-- TITLE -->
+        <h1>📌 Mission Planner</h1>
+        <p>Organize your tasks with Taskora 🚀</p>
+
+        <!-- INPUT -->
+        <form class="input-area">
+            <input type="text" id="task-input" placeholder="Add a new mission..." required />
+            <button type="submit" id="add-task-btn">➕ Add</button>
+        </form>
+
+        <!-- TASK LIST -->
+        <div class="task-display">
+            <p id="empty-msg">No missions yet...</p>
+            <ul id="task-list"></ul>
+        </div>
+
+        <!-- EMAIL -->
+        <section class="email-section">
+            <h2>📧 Stay Connected</h2>
+            <p>Get smart productivity tips from Taskora</p>
+            <form class="email-form" action="#" method="post">
+                <input type="email" placeholder="Enter your email" required />
+                <button type="submit">Subscribe</button>
+            </form>
+        </section>
+
+        <!-- FOOTER -->
+        <p style="margin-top:20px; font-size:12px;">
+            © Taskora | Created by Nandini & Aastik
+        </p>
+
+    </div>
+
+    <!-- JS -->
+    <script src="script_todo.js"></script>
+
+</body>
+</html>
