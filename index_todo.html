@@ -8,7 +8,7 @@
     <!-- Font -->
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
 
-    <!-- USE SAME CSS FOR CONSISTENCY -->
+    <!-- CSS -->
     <link rel="stylesheet" href="styles.css" />
 </head>
 
@@ -16,41 +16,53 @@
 
     <div class="container">
 
-        <!-- TITLE -->
-        <h1>📌 Mission Planner</h1>
-        <p>Organize your tasks with Taskora 🚀</p>
+        <h1>Mission Planner</h1>
+        <p>Organize your tasks with Taskora</p>
 
-        <!-- INPUT -->
         <form class="input-area">
             <input type="text" id="task-input" placeholder="Add a new mission..." required />
-            <button type="submit" id="add-task-btn">➕ Add</button>
+            <button type="submit" id="add-task-btn">Add</button>
         </form>
 
-        <!-- TASK LIST -->
         <div class="task-display">
             <p id="empty-msg">No missions yet...</p>
             <ul id="task-list"></ul>
         </div>
 
-        <!-- EMAIL -->
         <section class="email-section">
-            <h2>📧 Stay Connected</h2>
+            <h2>Stay Connected</h2>
             <p>Get smart productivity tips from Taskora</p>
-            <form class="email-form" action="#" method="post">
-                <input type="email" placeholder="Enter your email" required />
+
+            <form class="email-form" onsubmit="handleSubscribe(event)">
+                <input type="email" id="emailInput" placeholder="Enter your email" required />
                 <button type="submit">Subscribe</button>
             </form>
+
+            <p id="successMsg" style="display:none; color: lightgreen; margin-top:10px;">
+                Successfully subscribed!
+            </p>
         </section>
 
-        <!-- FOOTER -->
         <p style="margin-top:20px; font-size:12px;">
             © Taskora | Created by Nandini & Aastik
         </p>
 
     </div>
 
-    <!-- JS -->
     <script src="script_todo.js"></script>
+
+    <script>
+        function handleSubscribe(e) {
+            e.preventDefault();
+
+            const email = document.getElementById("emailInput").value;
+
+            if (email === "") return;
+
+            document.getElementById("successMsg").style.display = "block";
+            document.getElementById("emailInput").value = "";
+        }
+    </script>
 
 </body>
 </html>
