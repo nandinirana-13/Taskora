@@ -16,33 +16,33 @@
 
     <div class="container">
 
-        <!-- TITLE -->
-        <h1>🔥 Focus Sprint</h1>
-        <p>Power your focus with Taskora 🚀</p>
+        <h1>Focus Sprint</h1>
+        <p>Power your focus with Taskora</p>
 
-        <!-- TIMER -->
         <div class="timer">
             <span id="minutes">25</span>:<span id="seconds">00</span>
         </div>
 
-        <!-- BUTTONS -->
         <div class="buttons">
-            <button id="start">▶ Start</button>
-            <button id="pause">⏸ Pause</button>
-            <button id="reset">🔄 Reset</button>
+            <button id="start">Start</button>
+            <button id="pause">Pause</button>
+            <button id="reset">Reset</button>
         </div>
 
-        <!-- EMAIL -->
         <section class="email-section">
-            <h2>📧 Stay Connected</h2>
+            <h2>Stay Connected</h2>
             <p>Get smart productivity tips from Taskora</p>
-            <form class="email-form" action="#" method="post">
-                <input type="email" placeholder="Enter your email" required />
+
+            <form class="email-form" onsubmit="handleSubscribe(event)">
+                <input type="email" id="emailInput" placeholder="Enter your email" required />
                 <button type="submit">Subscribe</button>
             </form>
+
+            <p id="successMsg" style="display:none; color: lightgreen; margin-top:10px;">
+                Successfully subscribed!
+            </p>
         </section>
 
-        <!-- FOOTER -->
         <p style="margin-top:20px; font-size:12px;">
             © Taskora | Created by Nandini & Aastik
         </p>
@@ -50,6 +50,19 @@
     </div>
 
     <script src="script.js"></script>
+
+    <script>
+        function handleSubscribe(e) {
+            e.preventDefault();
+
+            const email = document.getElementById("emailInput").value;
+
+            if (email === "") return;
+
+            document.getElementById("successMsg").style.display = "block";
+            document.getElementById("emailInput").value = "";
+        }
+    </script>
 
 </body>
 </html>
